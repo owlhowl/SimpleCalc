@@ -12,7 +12,7 @@ namespace Calculator
 
         private void Number_Click(object sender, RoutedEventArgs e)
         {
-            if (isReady == true | textBox.Text == "0")
+            if (isReady | textBox.Text == "0")
             {
                 textBox.Text = "";
                 isReady = false;
@@ -22,7 +22,7 @@ namespace Calculator
 
         private void Dot_Click(object sender, RoutedEventArgs e)
         {
-            if (!textBox.Text.Contains(','))
+            if (!isReady && !textBox.Text.Contains(','))
                 textBox.Text += ",";
         }
 
